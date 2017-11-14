@@ -35,9 +35,10 @@ int do_pwd(int argc, char** argv) {
 int do_fg(int argc, char** argv) {
   if (!validate_fg_argv(argc, argv))
     return -1;
-
-  // TODO: Fill this.
-
+  
+  int status = 0;
+  printf("%d running %s\n", bgid, bgpath);
+  wait(&wait);
   return 0;
 }
 

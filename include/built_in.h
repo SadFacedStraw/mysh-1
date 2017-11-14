@@ -1,5 +1,6 @@
 #ifndef BUILT_IN_H_
 #define BUILT_IN_H_
+#define MAX_PATH 100
 
 typedef int (*built_in_command_do)(int, char**);
 typedef int (*built_in_command_validate)(int, char**);
@@ -10,6 +11,9 @@ struct built_in_command
   built_in_command_do command_do;
   built_in_command_validate command_validate;
 };
+
+int bgid;
+char bgpath[MAX_PATH];
 
 /**
   do_cd(argc, argv)
